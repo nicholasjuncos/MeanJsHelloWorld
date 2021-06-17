@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Hello World' });
 });
 
+router.get("/sentry-error", function (req, res) {
+  throw new Error("New Sentry Error!");
+});
+
 module.exports = router;
